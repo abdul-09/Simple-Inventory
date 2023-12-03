@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'dashboard.apps.DashboardConfig',
     'user.apps.UserConfig',
     'crispy_forms',
+    "crispy_bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -69,6 +70,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'SimpleInventory.wsgi.application'
 
@@ -118,18 +120,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
-STATIC_URL = '/static/'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MEDIA_ROOT = (BASE_DIR/"media/")
 
 MEDIA_URL = '/media/'
 
+
+STATIC_URL = '/static/'
+
+
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+STATIC_ROOT = (BASE_DIR/"asert/")
 
 
 LOGIN_REDIRECT_URL = 'dashboard-index'
