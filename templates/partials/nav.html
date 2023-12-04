@@ -1,0 +1,57 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-info bg-dark">
+    <div class="container">
+        {% if user.is_authenticated %}
+        <a class="navbar-brand text-white" href="{% url 'dashboard-index' %}">Simple Inventory</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse me-3" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                {% if user.is_authenticated and user.is_staff %}
+                <li class="nav-item active">
+                    <a class=" nav-link text-white" href="{% url 'dashboard-customers' %}">Staff<span
+                        class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="{% url 'dashboard-products' %}">Products<span
+                        class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="{% url 'dashboard-order' %}">Orders<span
+                        class="sr-only">(current)</span> </a>
+                </li>
+                {% else %}
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="{% url 'dashboard-products' %}">Products<span
+                        class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="{% url 'dashboard-order' %}">Orders<span
+                        class="sr-only">(current)</span> </a>
+                {% endif %}
+                </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="{% url 'user-profile' %}">{{ user.username }} Profile
+                        <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'user-logout' %}">Logout</a>
+                </li>
+            </ul>
+            {% else %}
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="{% url 'user-register' %}">Register <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'user-login' %}">Login</a>
+                </li>
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+</nav>
