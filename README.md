@@ -31,6 +31,8 @@ Start the server
 ```bash
   python manage.py runserver
 ```
+## Screenshot
+![Screenshot (69)](https://github.com/abdul-09/Simple-Inventory/assets/114946911/1c3dcbd7-82e2-4a0d-81e8-1c2d421312e1)
 
 ## Deployed Site
 
