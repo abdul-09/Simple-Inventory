@@ -3,6 +3,9 @@
 # Introduction
 Welcome to the Inventory Management Web App! This project aims to streamline inventory processes for Small and Medium-sized Enterprises (SMEs). As a developer, I crafted a Django-based solution focusing on authentication and authorization to enhance security and access control.
 
+##  What Inspired me
+As a procurement and supply chain major, my decision to delve into this project was deeply rooted in the desire to make a significant impact on the supply chain landscape. The goal was to assist SMEs by providing a Django-powered solution for managing their inventory, aligning with my passion for bridging gaps in the procurement and supply chain sector.
+
 ## Installation
 
 Clone the project.
@@ -50,7 +53,3 @@ To be updated with more features added.
 
 Contributions are welcome! If you have suggestions or find issues, please open an issue or submit a pull request.
 
-
-
-##  What Inspired me
-As a procurement and supply chain major, my decision to delve into this project was deeply rooted in the desire to make a significant impact on the supply chain landscape. The goal was to assist SMEs by providing a Django-powered solution for managing their inventory, aligning with my passion for bridging gaps in the procurement and supply chain sector.
